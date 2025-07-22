@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 
 // Define an enum that maps 4-bit binary strings to their hexadecimal equivalent
@@ -111,6 +112,65 @@ const char* get_hexadecimal_num_from_binary(const char* binary){
         return hex_string;
 
 
+}
+
+
+
+// Returns a 5-bit binary string corresponding to the integer from 0 to 31
+const char* get_binary_string_from_int(unsigned int num) 
+{
+    switch(num) 
+    {
+        case 0:  return "00000";
+        case 1:  return "00001";
+        case 2:  return "00010";
+        case 3:  return "00011";
+        case 4:  return "00100";
+        case 5:  return "00101";
+        case 6:  return "00110";
+        case 7:  return "00111";
+        case 8:  return "01000";
+        case 9:  return "01001";
+        case 10: return "01010";
+        case 11: return "01011";
+        case 12: return "01100";
+        case 13: return "01101";
+        case 14: return "01110";
+        case 15: return "01111";
+        case 16: return "10000";
+        case 17: return "10001";
+        case 18: return "10010";
+        case 19: return "10011";
+        case 20: return "10100";
+        case 21: return "10101";
+        case 22: return "10110";
+        case 23: return "10111";
+        case 24: return "11000";
+        case 25: return "11001";
+        case 26: return "11010";
+        case 27: return "11011";
+        case 28: return "11100";
+        case 29: return "11101";
+        case 30: return "11110";
+        case 31: return "11111";
+        default:
+        {
+            fprintf(stderr, "Error: Invalid register number %u. Must be between 0 and 31.\n", num);
+            return NULL;
+        }
+    }
+}
+
+
+char* concat(const char* s1, const char* s2) {
+    char* result = malloc(strlen(s1) + strlen(s2) + 1); // +1 for '\0'
+    if (result == NULL) {
+        fprintf(stderr, "Memory allocation failed\n");
+        exit(1);
+    }
+    strcpy(result, s1);
+    strcat(result, s2);
+    return result;
 }
 
 
