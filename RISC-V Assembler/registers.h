@@ -1,4 +1,4 @@
-#ifndef REGSITERS_H
+#ifndef REGISTERS_H
 #define REGISTERS_H
 #include <stdlib.h>
 #include <string.h>
