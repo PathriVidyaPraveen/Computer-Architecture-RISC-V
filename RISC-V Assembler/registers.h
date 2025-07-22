@@ -1,3 +1,5 @@
+#ifndef REGSITERS_H
+#define REGISTERS_H
 #include <stdlib.h>
 #include <string.h>
 
@@ -151,3 +153,5 @@ int get_register_number(const char *reg) {
         }
     }
 }
+
+#endif
