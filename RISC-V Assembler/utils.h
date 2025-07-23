@@ -5,6 +5,20 @@
 #include <string.h>
 #include <stdlib.h>
 
+// #define concat(s1, s2) \
+//     ({ \
+//         char* _tmp_result = malloc(strlen(s1) + strlen(s2) + 1); \
+//         if (!_tmp_result) { \
+//             fprintf(stderr, "Memory allocation failed\n"); \
+//             exit(1); \
+//         } \
+//         strcpy(_tmp_result, s1); \
+//         strcat(_tmp_result, s2); \
+//         free((void*)(s1)); \
+//         _tmp_result; \
+//     })
+
+
 
 // Define an enum that maps 4-bit binary strings to their hexadecimal equivalent
 typedef enum {
@@ -27,7 +41,7 @@ typedef enum {
 
 } BinaryToHex;
 
-const char* get_hexadecimal_num_from_binary(const char* binary){
+char* get_hexadecimal_num_from_binary(const char* binary){
 
     static char hex_string[9];
     int len = strlen(binary);
@@ -163,7 +177,7 @@ const char* get_binary_string_from_int(unsigned int num)
 
 
 char* concat(const char* s1, const char* s2) {
-    char* result = malloc(strlen(s1) + strlen(s2) + 1); // +1 for '\0'
+    char* result = (char*)malloc(strlen(s1) + strlen(s2) + 1); // +1 for '\0'
     if (result == NULL) {
         fprintf(stderr, "Memory allocation failed\n");
         exit(1);

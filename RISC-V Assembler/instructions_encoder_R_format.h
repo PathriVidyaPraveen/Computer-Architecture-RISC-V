@@ -44,7 +44,7 @@
 
 
 
-const char* ADD(unsigned int rs2, unsigned int rs1, unsigned int rd) {
+char* ADD(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     const char* rs2_str = get_binary_string_from_int(rs2);  // Must return dynamically allocated string
     const char* rs1_str = get_binary_string_from_int(rs1);
     const char* rd_str = get_binary_string_from_int(rd);
@@ -71,7 +71,7 @@ const char* ADD(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     free(binary_string);
     binary_string = temp5;
 
-    const char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
+    char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
 
     free(binary_string);
     free((void*)rs2_str);
@@ -82,7 +82,7 @@ const char* ADD(unsigned int rs2, unsigned int rs1, unsigned int rd) {
 }
 
 
-const char* SUB(unsigned int rs2, unsigned int rs1, unsigned int rd) {
+char* SUB(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     const char* rs2_str = get_binary_string_from_int(rs2);  // Must return dynamically allocated string
     const char* rs1_str = get_binary_string_from_int(rs1);
     const char* rd_str = get_binary_string_from_int(rd);
@@ -109,7 +109,7 @@ const char* SUB(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     free(binary_string);
     binary_string = temp5;
 
-    const char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
+    char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
 
     free(binary_string);
     free((void*)rs2_str);
@@ -119,7 +119,7 @@ const char* SUB(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     return hexadecimal_string;
 }
 
-const char* AND(unsigned int rs2, unsigned int rs1, unsigned int rd) {
+char* AND(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     const char* rs2_str = get_binary_string_from_int(rs2);  // Must return dynamically allocated string
     const char* rs1_str = get_binary_string_from_int(rs1);
     const char* rd_str = get_binary_string_from_int(rd);
@@ -146,7 +146,7 @@ const char* AND(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     free(binary_string);
     binary_string = temp5;
 
-    const char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
+    char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
 
     free(binary_string);
     free((void*)rs2_str);
@@ -157,8 +157,7 @@ const char* AND(unsigned int rs2, unsigned int rs1, unsigned int rd) {
 }
 
 
-
-const char* OR(unsigned int rs2, unsigned int rs1, unsigned int rd) {
+char* OR(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     const char* rs2_str = get_binary_string_from_int(rs2);  // Must return dynamically allocated string
     const char* rs1_str = get_binary_string_from_int(rs1);
     const char* rd_str = get_binary_string_from_int(rd);
@@ -185,7 +184,7 @@ const char* OR(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     free(binary_string);
     binary_string = temp5;
 
-    const char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
+    char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
 
     free(binary_string);
     free((void*)rs2_str);
@@ -197,7 +196,7 @@ const char* OR(unsigned int rs2, unsigned int rs1, unsigned int rd) {
 
 
 
-const char* XOR(unsigned int rs2, unsigned int rs1, unsigned int rd) {
+char* XOR(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     const char* rs2_str = get_binary_string_from_int(rs2);  // Must return dynamically allocated string
     const char* rs1_str = get_binary_string_from_int(rs1);
     const char* rd_str = get_binary_string_from_int(rd);
@@ -224,7 +223,7 @@ const char* XOR(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     free(binary_string);
     binary_string = temp5;
 
-    const char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
+    char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
 
     free(binary_string);
     free((void*)rs2_str);
@@ -234,7 +233,7 @@ const char* XOR(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     return hexadecimal_string;
 }
 
-const char* SLL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
+char* SLL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     const char* rs2_str = get_binary_string_from_int(rs2);  // Must return dynamically allocated string
     const char* rs1_str = get_binary_string_from_int(rs1);
     const char* rd_str = get_binary_string_from_int(rd);
@@ -261,7 +260,7 @@ const char* SLL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     free(binary_string);
     binary_string = temp5;
 
-    const char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
+    char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
 
     free(binary_string);
     free((void*)rs2_str);
@@ -274,7 +273,7 @@ const char* SLL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
 
 
 
-const char* SRL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
+char* SRL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     const char* rs2_str = get_binary_string_from_int(rs2);  // Must return dynamically allocated string
     const char* rs1_str = get_binary_string_from_int(rs1);
     const char* rd_str = get_binary_string_from_int(rd);
@@ -301,7 +300,7 @@ const char* SRL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     free(binary_string);
     binary_string = temp5;
 
-    const char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
+    char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
 
     free(binary_string);
     free((void*)rs2_str);
@@ -314,7 +313,7 @@ const char* SRL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
 
 
 
-const char* SRA(unsigned int rs2, unsigned int rs1, unsigned int rd) {
+char* SRA(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     const char* rs2_str = get_binary_string_from_int(rs2);  // Must return dynamically allocated string
     const char* rs1_str = get_binary_string_from_int(rs1);
     const char* rd_str = get_binary_string_from_int(rd);
@@ -341,7 +340,7 @@ const char* SRA(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     free(binary_string);
     binary_string = temp5;
 
-    const char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
+    char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
 
     free(binary_string);
     free((void*)rs2_str);
@@ -354,7 +353,7 @@ const char* SRA(unsigned int rs2, unsigned int rs1, unsigned int rd) {
 
 
 
-const char* MUL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
+char* MUL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     const char* rs2_str = get_binary_string_from_int(rs2);  // Must return dynamically allocated string
     const char* rs1_str = get_binary_string_from_int(rs1);
     const char* rd_str = get_binary_string_from_int(rd);
@@ -381,7 +380,7 @@ const char* MUL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
     free(binary_string);
     binary_string = temp5;
 
-    const char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
+    char* hexadecimal_string = get_hexadecimal_num_from_binary(binary_string);  // Make sure this allocates new memory
 
     free(binary_string);
     free((void*)rs2_str);
@@ -395,5 +394,31 @@ const char* MUL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
 
 
 
-// main function that uses instruction encoder 
+// main function that uses instruction encoder to call teh corresponding function for encoding
+
+char* instruction_encoder_r_format(const char* instruction , unsigned int rs2 , unsigned int rs1 , unsigned int rd){
+    if(strcmp(instruction , "add") == 0){
+        return ADD(rs2,rs1,rd);
+    }else if(strcmp(instruction , "sub") == 0){
+        return SUB(rs2,rs1,rd);
+    }else if(strcmp(instruction , "and") == 0){
+        return AND(rs2,rs1,rd);
+    }else if(strcmp(instruction , "or") == 0){
+        return OR(rs2,rs1,rd);
+    }else if(strcmp(instruction , "xor") == 0){
+        return XOR(rs2,rs1,rd);
+    }else if(strcmp(instruction , "sll") == 0){
+        return SLL(rs2,rs1,rd);
+    }else if(strcmp(instruction , "srl") == 0){
+        return SRL(rs2,rs1,rd);
+    }else if(strcmp(instruction, "sra") == 0){
+        return SRA(rs2,rs1,rd);
+    }else if(strcmp(instruction, "mul") == 0){
+        return MUL(rs2,rs1,rd);
+    }else{
+        fprintf(stderr, "Error: Please check whether instruction is preprocessed correctly or is a valid instruction of R-format");
+        return NULL;
+    }
+}
 #endif
+
