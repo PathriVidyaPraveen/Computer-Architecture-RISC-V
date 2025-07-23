@@ -396,7 +396,7 @@ char* MUL(unsigned int rs2, unsigned int rs1, unsigned int rd) {
 
 // main function that uses instruction encoder to call teh corresponding function for encoding
 
-char* instruction_encoder_r_format(const char* instruction , unsigned int rs2 , unsigned int rs1 , unsigned int rd){
+char* instruction_encoder_r_format(char* instruction , unsigned int rs2 , unsigned int rs1 , unsigned int rd){
     if(strcmp(instruction , "add") == 0){
         return ADD(rs2,rs1,rd);
     }else if(strcmp(instruction , "sub") == 0){
@@ -420,5 +420,8 @@ char* instruction_encoder_r_format(const char* instruction , unsigned int rs2 , 
         return NULL;
     }
 }
+
+
+
 #endif
 

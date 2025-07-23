@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include <ctype.h>
 
 // #define concat(s1, s2) \
 //     ({ \
@@ -17,6 +19,17 @@
 //         free((void*)(s1)); \
 //         _tmp_result; \
 //     })
+
+
+
+// typedef struct {
+//     bool valid;
+//     unsigned int rs2;
+//     unsigned int rs1;
+//     unsigned int rd;
+//     char instruction[10];
+
+// } Instruction;
 
 
 
@@ -186,6 +199,7 @@ char* concat(const char* s1, const char* s2) {
     strcat(result, s2);
     return result;
 }
+
 
 
 #endif
